@@ -7,8 +7,8 @@ var url="https://gateway.marvel.com:443/v1/public/characters"
 
 
 function thaythenoidung(thongtin){
-    
-        var infor=thongtin.results[1];
+    for (let i=1; i<20;i++){
+        var infor=thongtin.results[i];
         var img=infor.thumbnail.path+"."+infor.thumbnail.extension;
         var name=infor.name;
         var comics=infor.comics.available
@@ -20,8 +20,8 @@ function thaythenoidung(thongtin){
         </div>
         `
         console.log(charactersHtml)
-        document.getElementById("container").insertAdjacentElement("beforeend", charactersHtml)
-    
+        document.getElementById("container").insertAdjacentHTML("beforeend", charactersHtml)
+    }
 }
 async function fetchCharacters(){
     var key = marvelKey(privateKey,publicKey)

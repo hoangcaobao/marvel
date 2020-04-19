@@ -1,4 +1,14 @@
 #container{
     grid-template-columns: auto auto auto;
+
+    display: flex;
     justify-content: space-around;
+
 }
+
+#flexbox{
+    display: flex;
+   
+    
+}
+
